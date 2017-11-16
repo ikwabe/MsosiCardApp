@@ -47,7 +47,6 @@ namespace MsosiCardApp
             qntTxt.Text += Btn5.Text;
         }
 
-        //jump
         private void Btn6_Click(object sender, EventArgs e)
         {
             qntTxt.Text += Btn6.Text;
