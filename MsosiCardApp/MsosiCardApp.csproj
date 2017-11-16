@@ -74,6 +74,12 @@
     <Compile Include="ndiziTab.Designer.cs">
       <DependentUpon>ndiziTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="othersTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="othersTab.Designer.cs">
+      <DependentUpon>othersTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="pilauTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ndiziTab.resx">
       <DependentUpon>ndiziTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="othersTab.resx">
+      <DependentUpon>othersTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pilauTab.resx">
       <DependentUpon>pilauTab.cs</DependentUpon>

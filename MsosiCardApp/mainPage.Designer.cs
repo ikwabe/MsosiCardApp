@@ -79,6 +79,7 @@
             this.verticalTransEffect = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.holizotalTransEffect = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.doneEffectTrans = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.otherBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.headerPannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             this.Panel2.SuspendLayout();
@@ -98,6 +99,7 @@
             // headerPannel
             // 
             this.headerPannel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.headerPannel.Controls.Add(this.otherBtn);
             this.headerPannel.Controls.Add(this.pilauBtn);
             this.headerPannel.Controls.Add(this.tambiBtn);
             this.headerPannel.Controls.Add(this.viaziBtn);
@@ -1299,6 +1301,43 @@
             this.doneEffectTrans.DefaultAnimation = animation1;
             this.doneEffectTrans.Interval = 3;
             // 
+            // otherBtn
+            // 
+            this.otherBtn.Activecolor = System.Drawing.Color.Purple;
+            this.otherBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.otherBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.otherBtn.BorderRadius = 5;
+            this.otherBtn.ButtonText = "OTHER";
+            this.otherBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.doneEffectTrans.SetDecoration(this.otherBtn, BunifuAnimatorNS.DecorationType.None);
+            this.holizotalTransEffect.SetDecoration(this.otherBtn, BunifuAnimatorNS.DecorationType.None);
+            this.verticalTransEffect.SetDecoration(this.otherBtn, BunifuAnimatorNS.DecorationType.None);
+            this.otherBtn.DisabledColor = System.Drawing.Color.Gray;
+            this.otherBtn.Iconcolor = System.Drawing.Color.Transparent;
+            this.otherBtn.Iconimage = null;
+            this.otherBtn.Iconimage_right = null;
+            this.otherBtn.Iconimage_right_Selected = null;
+            this.otherBtn.Iconimage_Selected = null;
+            this.otherBtn.IconMarginLeft = 0;
+            this.otherBtn.IconMarginRight = 0;
+            this.otherBtn.IconRightVisible = true;
+            this.otherBtn.IconRightZoom = 0D;
+            this.otherBtn.IconVisible = true;
+            this.otherBtn.IconZoom = 90D;
+            this.otherBtn.IsTab = false;
+            this.otherBtn.Location = new System.Drawing.Point(949, 12);
+            this.otherBtn.Name = "otherBtn";
+            this.otherBtn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.otherBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(49)))), ((int)(((byte)(199)))));
+            this.otherBtn.OnHoverTextColor = System.Drawing.Color.White;
+            this.otherBtn.selected = false;
+            this.otherBtn.Size = new System.Drawing.Size(103, 85);
+            this.otherBtn.TabIndex = 9;
+            this.otherBtn.Text = "OTHER";
+            this.otherBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.otherBtn.Textcolor = System.Drawing.Color.White;
+            this.otherBtn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1384,6 +1423,7 @@
         private BunifuAnimatorNS.BunifuTransition doneEffectTrans;
         private Bunifu.Framework.UI.BunifuImageButton doneBtn;
         private Bunifu.Framework.UI.BunifuImageButton submitBtn;
+        private Bunifu.Framework.UI.BunifuFlatButton otherBtn;
     }
 }
 

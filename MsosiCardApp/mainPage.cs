@@ -899,8 +899,20 @@ namespace MsosiCardApp
 
 
             }
+            try
+            {
+                qnt = int.Parse(qntTxt.Text);
+                MessageBox.Show(fullOderName + " " + qnt);
+            }
+            catch
+            {
+                MessageBox.Show("Please Enter the Quantity of the Product");
+            }
+            
 
-            MessageBox.Show(fullOderName);
+
+
+           
 
         } //end of enter button
 
