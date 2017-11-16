@@ -13,6 +13,7 @@ namespace MsosiCardApp
     public partial class chipsTab : UserControl
     {
         public string mboga;
+        public string aina;
         public static chipsTab _instance;
         public static chipsTab Instance
         {
@@ -69,6 +70,7 @@ namespace MsosiCardApp
             animator.ShowSync(panel1);
             kavuBtn.Normalcolor = Color.DarkGreen;
             mayaiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
+            aina = kavuBtn.Text;
            if(panel1.Visible == false)
             {
                 panel1.Visible = true;
@@ -82,6 +84,7 @@ namespace MsosiCardApp
             animator.ShowSync(panel1);
             mayaiBtn.Normalcolor = Color.DarkGreen;
             kavuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
+            aina = mayaiBtn.Text;
             if (panel1.Visible == false)
             {
                 panel1.Visible = true;

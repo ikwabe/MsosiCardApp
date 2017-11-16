@@ -627,6 +627,7 @@
             this.enterBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.enterBtn.Textcolor = System.Drawing.Color.White;
             this.enterBtn.TextFont = new System.Drawing.Font("DigifaceWide", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
             // 
             // delBtn
             // 

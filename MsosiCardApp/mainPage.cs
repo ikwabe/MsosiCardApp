@@ -17,6 +17,9 @@ namespace MsosiCardApp
             InitializeComponent();
         }
         public string chakula;
+        public string fullOderName;
+        public int qnt;
+
         private void closeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -363,6 +366,545 @@ namespace MsosiCardApp
             ndiziBtn.BackColor = Color.FromArgb(0, 122, 204);
         }
 
+       
+
+        private void animate_Tick(object sender, EventArgs e)
+        {
+            animate.Stop();
+            doneEffectTrans.ShowSync(doneBtn);  
+        }
+
+        private void mainPage_Load(object sender, EventArgs e)
+        {
+            submitBtn.Visible = false;
+        }
+
+        private void enterBtn_Click(object sender, EventArgs e)
+        {
+
+            switch (chakula)
+            {
+                //Drinks Menu
+                case "DRINKS":
+                    switch (drinksTab.Instance.kinywaji)
+                    {
+                        //soda part
+                        case "PEPSI":
+                            fullOderName = "PEPSI";
+                            break;
+
+                        case "MIRINDA":
+                            fullOderName = "MIRINDA";
+                            break;
+
+                        case "7 UP":
+                            fullOderName = "7 UP";
+                            break;
+
+                        case "MOUNTAIN DEW":
+                            fullOderName = "MOUNTAIN DEW";
+                            break;
+
+                        case "COCACOLA":
+                            fullOderName = "COCACOLA";
+                            break;
+
+                        case "FANTA":
+                            fullOderName = "FANTA";
+                            break;
+
+                        case "SPRITE":
+                            fullOderName = "SPRITE";
+                            break;
+
+                        case "EVERVESS":
+                            fullOderName = "EVERVESS";
+                            break;
+
+
+                        //Juice part
+                        case "TROPICAL JUICE":
+                            fullOderName = "TROPICAL JUICE";
+                            break;
+
+                        case "MANGO JUICE":
+                            fullOderName = "MANGO JUICE";
+                            break;
+
+                        case "AVOCADO JUICE":
+                            fullOderName = "AVOCADO JUICE";
+                            break;
+
+                        case "UKWAJU JUICE":
+                            fullOderName = "UKWAJU JUICE";
+                            break;
+
+                        case "UBUYU JUICE":
+                            fullOderName = "UBUYU JUICE";
+                            break;
+
+                        case "PINE-APPLE JUICE":
+                            fullOderName = "PINE-APPLE JUICE";
+                            break;
+
+                        case "PASSION JUICE":
+                            fullOderName = "PASSION JUICE";
+                            break;
+
+                        case "TENDE JUICE":
+                            fullOderName = "TENDE JUICE";
+                            break;
+
+
+
+                        default:
+                            MessageBox.Show("Sorry, There is an error occured..!");
+                            break;
+                    }
+                    break; //end of drinks
+
+
+
+
+                //Chakula Menu
+
+                //wali menu start
+                case "WALI":
+                    switch (waliTab.Instance.mboga)
+                    {
+                        //mboga part
+                        case "KUKU":
+                            fullOderName = chakula + " KUKU";
+                            break;
+
+                        case "NYAMA":
+                            fullOderName = chakula + " NYAMA";
+                            break;
+
+                        case "SAMAKI":
+                            fullOderName = chakula + " SAMAKI";
+                            break;
+
+                        case "MAINI":
+                            fullOderName = chakula + " MAINI";
+                            break;
+
+                        case "NJEGERE":
+                            fullOderName = chakula + " NJEGERE";
+                            break;
+
+                        case "UTUMBO":
+                            fullOderName = chakula + " UTUMBO";
+                            break;
+
+                        case "DAGAA":
+                            fullOderName = chakula + " DAGAA";
+                            break;
+
+                        case "MSHKAKI KUKU":
+                            fullOderName = chakula + " MSHKAKI KUKU";
+                            break;
+
+                        case "MSHKAKI NG`OMBE":
+                            fullOderName = chakula + " MSHKAKI NG`OMBE";
+                            break;
+
+                        case "MAHARAGWE":
+                            fullOderName = chakula + " MAHARAGWE";
+                            break;
+
+                        default:
+                            MessageBox.Show("Sorry, There is an error occured..!");
+                            break;
+
+                    }
+                    break;
+
+                //wali menu end
+
+
+                //ugali menu start
+                case "UGALI":
+                    switch (ugaliTab.Instance.mboga)
+                    {
+                        //mboga part
+                        case "KUKU":
+                            fullOderName = chakula + " KUKU";
+                            break;
+
+                        case "NYAMA":
+                            fullOderName = chakula + " NYAMA";
+                            break;
+
+                        case "SAMAKI":
+                            fullOderName = chakula + " SAMAKI";
+                            break;
+
+                        case "MAINI":
+                            fullOderName = chakula + " MAINI";
+                            break;
+
+                        case "NJEGERE":
+                            fullOderName = chakula + " NJEGERE";
+                            break;
+
+                        case "UTUMBO":
+                            fullOderName = chakula + " UTUMBO";
+                            break;
+
+                        case "DAGAA":
+                            fullOderName = chakula + " DAGAA";
+                            break;
+
+                        case "MSHKAKI KUKU":
+                            fullOderName = chakula + " MSHKAKI KUKU";
+                            break;
+
+                        case "MSHKAKI NG`OMBE":
+                            fullOderName = chakula + " MSHKAKI NG`OMBE";
+                            break;
+
+                        case "MAHARAGWE":
+                            fullOderName = chakula + " MAHARAGWE";
+                            break;
+
+                        default:
+                            MessageBox.Show("Sorry, There is an error occured..!");
+                            break;
+
+                    }
+                    break;
+
+                //ugali menu end
+
+
+                //pilau menu start
+                case "PILAU":
+                    switch (pilauTab.Instance.mboga)
+                    {
+                        //mboga part
+                        case "KUKU":
+                            fullOderName = chakula + " KUKU";
+                            break;
+
+                        case "NYAMA":
+                            fullOderName = chakula + " NYAMA";
+                            break;
+
+                        case "SAMAKI":
+                            fullOderName = chakula + " SAMAKI";
+                            break;
+
+                        case "MAINI":
+                            fullOderName = chakula + " MAINI";
+                            break;
+
+                        case "NJEGERE":
+                            fullOderName = chakula + " NJEGERE";
+                            break;
+
+                        case "UTUMBO":
+                            fullOderName = chakula + " UTUMBO";
+                            break;
+
+                        case "DAGAA":
+                            fullOderName = chakula + " DAGAA";
+                            break;
+
+                        case "MSHKAKI KUKU":
+                            fullOderName = chakula + " MSHKAKI KUKU";
+                            break;
+
+                        case "MSHKAKI NG`OMBE":
+                            fullOderName = chakula + " MSHKAKI NG`OMBE";
+                            break;
+
+                        case "MAHARAGWE":
+                            fullOderName = chakula + " MAHARAGWE";
+                            break;
+
+                        default:
+                            MessageBox.Show("Sorry, There is an error occured..!");
+                            break;
+
+                    }
+                    break;
+
+                //pilau menu end
+
+                //ndizi menu start
+                case "NDIZI":
+                    switch (ndiziTab.Instance.mboga)
+                    {
+                        //mboga part
+                        case "KUKU":
+                            fullOderName = chakula + " KUKU";
+                            break;
+
+                        case "NYAMA":
+                            fullOderName = chakula + " NYAMA";
+                            break;
+
+                        case "SAMAKI":
+                            fullOderName = chakula + " SAMAKI";
+                            break;
+
+                        case "MAINI":
+                            fullOderName = chakula + " MAINI";
+                            break;
+
+                        case "NJEGERE":
+                            fullOderName = chakula + " NJEGERE";
+                            break;
+
+                        case "UTUMBO":
+                            fullOderName = chakula + " UTUMBO";
+                            break;
+
+                        case "DAGAA":
+                            fullOderName = chakula + " DAGAA";
+                            break;
+
+                        case "MSHKAKI KUKU":
+                            fullOderName = chakula + " MSHKAKI KUKU";
+                            break;
+
+                        case "MSHKAKI NG`OMBE":
+                            fullOderName = chakula + " MSHKAKI NG`OMBE";
+                            break;
+
+                        case "MAHARAGWE":
+                            fullOderName = chakula + " MAHARAGWE";
+                            break;
+
+                        default:
+                            MessageBox.Show("Sorry, There is an error occured..!");
+                            break;
+
+                    }
+                    break;
+
+                //ndizi menu end
+
+                //viazi menu start
+                case "VIAZI":
+                    switch (viaziTab.Instance.mboga)
+                    {
+                        //mboga part
+                        case "KUKU":
+                            fullOderName = chakula + " KUKU";
+                            break;
+
+                        case "NYAMA":
+                            fullOderName = chakula + " NYAMA";
+                            break;
+
+                        case "SAMAKI":
+                            fullOderName = chakula + " SAMAKI";
+                            break;
+
+                        case "MAINI":
+                            fullOderName = chakula + " MAINI";
+                            break;
+
+                        case "NJEGERE":
+                            fullOderName = chakula + " NJEGERE";
+                            break;
+
+                        case "UTUMBO":
+                            fullOderName = chakula + " UTUMBO";
+                            break;
+
+                        case "DAGAA":
+                            fullOderName = chakula + " DAGAA";
+                            break;
+
+                        case "MSHKAKI KUKU":
+                            fullOderName = chakula + " MSHKAKI KUKU";
+                            break;
+
+                        case "MSHKAKI NG`OMBE":
+                            fullOderName = chakula + " MSHKAKI NG`OMBE";
+                            break;
+
+                        case "MAHARAGWE":
+                            fullOderName = chakula + " MAHARAGWE";
+                            break;
+
+                        default:
+                            MessageBox.Show("Sorry, There is an error occured..!");
+                            break;
+
+                    }
+                    break;
+
+                //viazi menu end
+
+                //tambi menu start
+                case "TAMBI":
+                    switch (tambiTab.Instance.mboga)
+                    {
+                        //mboga part
+                        case "KUKU":
+                            fullOderName = chakula + " KUKU";
+                            break;
+
+                        case "NYAMA":
+                            fullOderName = chakula + " NYAMA";
+                            break;
+
+                        case "SAMAKI":
+                            fullOderName = chakula + " SAMAKI";
+                            break;
+
+                        case "MAINI":
+                            fullOderName = chakula + " MAINI";
+                            break;
+
+                        case "NJEGERE":
+                            fullOderName = chakula + " NJEGERE";
+                            break;
+
+                        case "UTUMBO":
+                            fullOderName = chakula + " UTUMBO";
+                            break;
+
+                        case "DAGAA":
+                            fullOderName = chakula + " DAGAA";
+                            break;
+
+                        case "MSHKAKI KUKU":
+                            fullOderName = chakula + " MSHKAKI KUKU";
+                            break;
+
+                        case "MSHKAKI NG`OMBE":
+                            fullOderName = chakula + " MSHKAKI NG`OMBE";
+                            break;
+
+                        case "MAHARAGWE":
+                            fullOderName = chakula + " MAHARAGWE";
+                            break;
+
+                        default:
+                            MessageBox.Show("Sorry, There is an error occured..!");
+                            break;
+
+                    }
+                    break;
+
+                //tambi menu end
+
+
+                //chips menu start
+                case "CHIPS":
+                    switch (chipsTab.Instance.aina)
+                    {
+                       //Aina part
+
+                        //KAVU START
+                        case "KAVU":
+                            if (chipsTab.Instance.mboga == null) {
+                                fullOderName = chakula + " KAVU";
+                            }
+                            else
+                            {
+                                switch (chipsTab.Instance.mboga)
+                                {
+
+                                    //mboga part
+                                    case "NYAMA":
+                                        fullOderName = chakula + " KAVU " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "KUKU":
+                                        fullOderName = chakula + " KAVU " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "SAMAKI":
+                                        fullOderName = chakula + " KAVU " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "MAINI":
+                                        fullOderName = chakula + " KAVU " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "MSHKAKI KUKU":
+                                        fullOderName = chakula + " KAVU " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "MSHKAKI NG`OMBE":
+                                        fullOderName = chakula + " KAVU " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    default:
+                                        MessageBox.Show("Sorry, There is an error occured..!");
+                                        break;
+
+                                }
+                            }
+                           
+                            break;
+                        //END OF KAVU CASE
+
+                        //MAYAI START
+                        case "MAYAI":
+                            if (chipsTab.Instance.mboga == null)
+                            {
+                                fullOderName = chakula + " MAYAI";
+                            }
+                            else
+                            {
+                                switch (chipsTab.Instance.mboga)
+                                {
+                                    //mboga part
+                                    case "NYAMA":
+                                        fullOderName = chakula + " MAYAI " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "KUKU":
+                                        fullOderName = chakula + " MAYAI " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "SAMAKI":
+                                        fullOderName = chakula + " MAYAI " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "MAINI":
+                                        fullOderName = chakula + " MAYAI " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "MSHKAKI KUKU":
+                                        fullOderName = chakula + " MAYAI " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    case "MSHKAKI NG`OMBE":
+                                        fullOderName = chakula + " MAYAI " + chipsTab.Instance.mboga;
+                                        break;
+
+                                    default:
+                                        MessageBox.Show("Sorry, There is an error occured..!");
+                                        break;
+
+                                }
+                            }
+                          
+                            break;
+                            //END OF MAYAI CASE
+
+
+                    }
+                    break;
+
+                    //chips menu end
+
+
+            }
+
+            MessageBox.Show(fullOderName);
+
+        } //end of enter button
+
+        //SUBMIT BUTTON
         private void submitBtn_Click(object sender, EventArgs e)
         {
             animate.Start();
@@ -378,6 +920,7 @@ namespace MsosiCardApp
             ugaliTab.Instance.Visible = false;
             viaziTab.Instance.Visible = false;
             pilauTab.Instance.Visible = false;
+            fullOderName = null;
 
 
             //color transition
@@ -390,17 +933,8 @@ namespace MsosiCardApp
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
             ndiziBtn.BackColor = Color.FromArgb(0, 122, 204);
-        }
 
-        private void animate_Tick(object sender, EventArgs e)
-        {
-            animate.Stop();
-            doneEffectTrans.ShowSync(doneBtn);  
-        }
-
-        private void mainPage_Load(object sender, EventArgs e)
-        {
-            submitBtn.Visible = false;
-        }
+           
+        } //END OF SUBMIT BUTTON
     }
 }

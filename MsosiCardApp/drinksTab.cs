@@ -36,8 +36,7 @@ namespace MsosiCardApp
             juiceBtn.Normalcolor = Color.DarkGreen;
             sodaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
 
-            //case
-            kinywaji = juiceBtn.Text;
+           
         }
 
         private void sodaBtn_Click(object sender, EventArgs e)
@@ -47,8 +46,7 @@ namespace MsosiCardApp
             sodaBtn.Normalcolor = Color.DarkGreen;
             juiceBtn.Normalcolor = Color.FromArgb(0, 122, 204);
 
-            //case
-            kinywaji = sodaBtn.Text;
+           
 
         }
 
