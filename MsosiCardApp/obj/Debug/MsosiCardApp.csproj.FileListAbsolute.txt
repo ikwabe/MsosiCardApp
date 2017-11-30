@@ -16,3 +16,9 @@ c:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\Msos
 c:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.tambiTab.resources
 c:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.ugaliTab.resources
 c:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.viaziTab.resources
+C:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.othersTab.resources
+C:\Users\Shadrack Ikwabe\documents\visual studio 2015\Projects\MsosiCardApp\MsosiCardApp\bin\Debug\MySql.Data.dll
+C:\Users\Shadrack Ikwabe\documents\visual studio 2015\Projects\MsosiCardApp\MsosiCardApp\bin\Debug\MySql.Data.xml
+C:\Users\Shadrack Ikwabe\documents\visual studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.centreReg.resources
+C:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.EmpRegForm.resources
+C:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.login.resources

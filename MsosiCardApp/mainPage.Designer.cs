@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
@@ -1143,6 +1145,14 @@
             this.holizotalTransEffect.SetDecoration(this.todayDataGrid, BunifuAnimatorNS.DecorationType.None);
             this.verticalTransEffect.SetDecoration(this.todayDataGrid, BunifuAnimatorNS.DecorationType.None);
             this.doneEffectTrans.SetDecoration(this.todayDataGrid, BunifuAnimatorNS.DecorationType.None);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.todayDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.todayDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.todayDataGrid.Location = new System.Drawing.Point(0, 0);
             this.todayDataGrid.Name = "todayDataGrid";
@@ -1211,6 +1221,14 @@
             this.holizotalTransEffect.SetDecoration(this.billDataGrid, BunifuAnimatorNS.DecorationType.None);
             this.verticalTransEffect.SetDecoration(this.billDataGrid, BunifuAnimatorNS.DecorationType.None);
             this.doneEffectTrans.SetDecoration(this.billDataGrid, BunifuAnimatorNS.DecorationType.None);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.billDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.billDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.billDataGrid.Location = new System.Drawing.Point(0, 0);
             this.billDataGrid.Name = "billDataGrid";
@@ -1307,7 +1325,7 @@
             this.otherBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.otherBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.otherBtn.BorderRadius = 5;
-            this.otherBtn.ButtonText = "OTHER";
+            this.otherBtn.ButtonText = "OTHERS";
             this.otherBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.doneEffectTrans.SetDecoration(this.otherBtn, BunifuAnimatorNS.DecorationType.None);
             this.holizotalTransEffect.SetDecoration(this.otherBtn, BunifuAnimatorNS.DecorationType.None);
@@ -1331,12 +1349,13 @@
             this.otherBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(49)))), ((int)(((byte)(199)))));
             this.otherBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.otherBtn.selected = false;
-            this.otherBtn.Size = new System.Drawing.Size(103, 85);
+            this.otherBtn.Size = new System.Drawing.Size(108, 85);
             this.otherBtn.TabIndex = 9;
-            this.otherBtn.Text = "OTHER";
+            this.otherBtn.Text = "OTHERS";
             this.otherBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.otherBtn.Textcolor = System.Drawing.Color.White;
             this.otherBtn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherBtn.Click += new System.EventHandler(this.otherBtn_Click);
             // 
             // mainPage
             // 

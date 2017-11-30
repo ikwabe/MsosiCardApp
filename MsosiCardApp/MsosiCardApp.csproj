@@ -36,6 +36,7 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\..\Downloads\SWIFT PROJECT FINAL\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -50,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="centreReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="centreReg.Designer.cs">
+      <DependentUpon>centreReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="chipsTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -61,6 +68,18 @@
     </Compile>
     <Compile Include="drinksTab.Designer.cs">
       <DependentUpon>drinksTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpRegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpRegForm.Designer.cs">
+      <DependentUpon>EmpRegForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="mainPage.cs">
       <SubType>Form</SubType>
@@ -112,11 +131,20 @@
     <Compile Include="waliTab.Designer.cs">
       <DependentUpon>waliTab.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="centreReg.resx">
+      <DependentUpon>centreReg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="chipsTab.resx">
       <DependentUpon>chipsTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="drinksTab.resx">
       <DependentUpon>drinksTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpRegForm.resx">
+      <DependentUpon>EmpRegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainPage.resx">
       <DependentUpon>mainPage.cs</DependentUpon>

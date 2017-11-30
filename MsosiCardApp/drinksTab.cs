@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Bunifu.Framework.UI;
 namespace MsosiCardApp
 {
     public partial class drinksTab : UserControl
     {
         public string kinywaji;
-        static int count = 1;
+        
         public static drinksTab _instance;
         public static drinksTab Instance
         {
@@ -28,411 +28,92 @@ namespace MsosiCardApp
         {
             InitializeComponent();
         }
-
-        private void juiceBtn_Click(object sender, EventArgs e)
+        BunifuFlatButton[] bt;
+        FlowLayoutPanel flwPn = new FlowLayoutPanel();
+        private void drinksTab_Load(object sender, EventArgs e)
         {
-            animator.Show(juicePanel);
-            sodaPannel.Visible = false;
-            juiceBtn.Normalcolor = Color.DarkGreen;
-            sodaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-
-           
-        }
-
-        private void sodaBtn_Click(object sender, EventArgs e)
-        {
-            animator.Show(sodaPannel);
-            juicePanel.Visible = false;
-            sodaBtn.Normalcolor = Color.DarkGreen;
-            juiceBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-
-           
-
-        }
-
-        //soda
-        private void pepsiBtn_Click(object sender, EventArgs e)
-        {
-           if(count % 2 == 1)
+            
+            bt = new BunifuFlatButton[2];
+            for(int j = 0; j < 2; j++)
             {
-                kinywaji = pepsiBtn.Text;
-
-                //color transition
-                pepsiBtn.Normalcolor = Color.DarkGreen;
-                mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-                tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-
-
+               
+                bt[j] = new BunifuFlatButton();
+                bt[j].Name = "btn" + j.ToString();
+                bt[j].TextFont = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
+                bt[j].Width = 200;
+                bt[j].Height = 60;
+                bt[j].Iconimage = null;
+                bt[j].BorderRadius = 5;
+                bt[j].Normalcolor = Color.FromArgb(0, 122, 204);
+                bt[j].TextAlign = ContentAlignment.MiddleCenter;
+                bt[j].Click += new EventHandler(bt_Click);
+                if (j == 0)
+                {
+                    bt[j].Text = "JUICE";
+                   
+                }
+                else
+                {
+                    
+                   
+                    bt[j].Text = "SODA";
+                }
+                flowLayoutPanel1.Controls.Add(bt[j]);
+               
                
             }
-           else
+
+        }
+        int i = 1;
+        private void bt_Click(object sender, EventArgs e)
+        {
+            bool check = true;
+            timer1.Start();
+
+            var button = sender as BunifuFlatButton;
+            while(check == true)
             {
-                kinywaji = null;
-                pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            }
+                BunifuFlatButton bt = new BunifuFlatButton();
+
+                bt.Name = "btn" + i.ToString();
+                bt.TextFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
+                bt.Width = 380;
+                bt.Height = 40;
+                bt.Iconimage = null;
+                bt.BorderRadius = 5;
+                bt.Normalcolor = Color.FromArgb(0, 122, 204);
+                bt.TextAlign = ContentAlignment.MiddleCenter;
+                if (button.Text == "JUICE")
+                {
+                    
+                    bt.Text = "JUICE YA " + i.ToString();
+                    flowLayoutPanel2.Controls.Add(bt);
+                }
+                else
+                {
+                    bt.Text = "SODA YA " + i.ToString();
+                    flwPn.Visible = false;
+                    flwPn.Dock = DockStyle.Fill;
+                    flwPn.FlowDirection = FlowDirection.TopDown;
+                    flwPn.WrapContents = false;
+                    flwPn.Controls.Add(bt);
+                    panel1.Controls.Add(flwPn);
+                }
                 
-                count++;
-           
-        }
-         
-        private void mirindaBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = mirindaBtn.Text;
+                
+                check = false;
+                
+            }
+            i++;
 
-            //color transition
-            mirindaBtn.Normalcolor = Color.DarkGreen;
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
         }
 
-        private void svnUpBtn_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            kinywaji = svnUpBtn.Text;
-
-            //color transition
-            svnUpBtn.Normalcolor = Color.DarkGreen;
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void mntnDewBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = mntnDewBtn.Text;
-
-            //color transition
-            mntnDewBtn.Normalcolor = Color.DarkGreen;
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void cocacolaBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = cocacolaBtn.Text;
-
-            //color transition
-            cocacolaBtn.Normalcolor = Color.DarkGreen;
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void fantaBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = fantaBtn.Text;
-
-            //color transition
-            fantaBtn.Normalcolor = Color.DarkGreen;
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void spriteBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = spriteBtn.Text;
-
-            //color transition
-            spriteBtn.Normalcolor = Color.DarkGreen;
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void evervsBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = evervsBtn.Text;
-
-            //color transition
-            evervsBtn.Normalcolor = Color.DarkGreen;
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        //Juice
-
-        private void tropicalBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = tropicalBtn.Text;
-
-            //color transition
-            tropicalBtn.Normalcolor = Color.DarkGreen;
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void mangoBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = mangoBtn.Text;
-
-            //color transition
-            mangoBtn.Normalcolor = Color.DarkGreen;
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void avocadoBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = avocadoBtn.Text;
-
-            //color transition
-            avocadoBtn.Normalcolor = Color.DarkGreen;
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void ukwajuBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = ukwajuBtn.Text;
-
-            //color transition
-            ukwajuBtn.Normalcolor = Color.DarkGreen;
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void ubuyuBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = ubuyuBtn.Text;
-
-            //color transition
-            ubuyuBtn.Normalcolor = Color.DarkGreen;
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void pineAppleBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = pineAppleBtn.Text;
-
-            //color transition
-            pineAppleBtn.Normalcolor = Color.DarkGreen;
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void pasionBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = pasionBtn.Text;
-
-            //color transition
-            pasionBtn.Normalcolor = Color.DarkGreen;
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tendeBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-        }
-
-        private void tendeBtn_Click(object sender, EventArgs e)
-        {
-            kinywaji = tendeBtn.Text;
-
-            //color transition
-            tendeBtn.Normalcolor = Color.DarkGreen;
-            mangoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            avocadoBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ukwajuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            ubuyuBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pineAppleBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pasionBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            tropicalBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mirindaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            svnUpBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            mntnDewBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            cocacolaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            fantaBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            spriteBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            pepsiBtn.Normalcolor = Color.FromArgb(0, 122, 204);
-            evervsBtn.Normalcolor = Color.FromArgb(0, 122, 204);
+            timer1.Stop();
+            animator.ShowSync(flwPn);
+            
+               
         }
     }
 }

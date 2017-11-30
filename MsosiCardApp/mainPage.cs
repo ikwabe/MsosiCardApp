@@ -104,6 +104,8 @@ namespace MsosiCardApp
             viaziTab.Instance.Visible = false;
             tambiTab.Instance.Visible = false;
             pilauTab.Instance.Visible = false;
+            othersTab.Instance.Visible = false;
+           
             submitBtn.Visible = true;
 
             //taking the name of the menu
@@ -125,6 +127,7 @@ namespace MsosiCardApp
             pilauBtn.BackColor = Color.FromArgb(0, 122, 204);
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            otherBtn.BackColor = Color.FromArgb(0, 122, 204);
         }
 
         private void waliBtn_Click(object sender, EventArgs e)
@@ -140,6 +143,8 @@ namespace MsosiCardApp
             viaziTab.Instance.Visible = false;
             tambiTab.Instance.Visible = false;
             pilauTab.Instance.Visible = false;
+            othersTab.Instance.Visible = false;
+           
             submitBtn.Visible = true;
 
             //taking the name of the menu
@@ -160,6 +165,7 @@ namespace MsosiCardApp
             pilauBtn.BackColor = Color.FromArgb(0, 122, 204);
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            otherBtn.BackColor = Color.FromArgb(0, 122, 204);
         }
 
         private void chipsBtn_Click(object sender, EventArgs e)
@@ -175,6 +181,8 @@ namespace MsosiCardApp
             viaziTab.Instance.Visible = false;
             tambiTab.Instance.Visible = false;
             pilauTab.Instance.Visible = false;
+            othersTab.Instance.Visible = false;
+           
             submitBtn.Visible = true;
 
             //taking the name of the menu
@@ -194,6 +202,7 @@ namespace MsosiCardApp
             pilauBtn.BackColor = Color.FromArgb(0, 122, 204);
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            otherBtn.BackColor = Color.FromArgb(0, 122, 204);
         }
 
         private void ugaliBtn_Click(object sender, EventArgs e)
@@ -209,6 +218,8 @@ namespace MsosiCardApp
             viaziTab.Instance.Visible = false;
             tambiTab.Instance.Visible = false;
             pilauTab.Instance.Visible = false;
+            othersTab.Instance.Visible = false;
+           
             submitBtn.Visible = true;
 
             //taking the name of the menu
@@ -228,6 +239,7 @@ namespace MsosiCardApp
             pilauBtn.BackColor = Color.FromArgb(0, 122, 204);
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            otherBtn.BackColor = Color.FromArgb(0, 122, 204);
         }
 
         private void ndiziBtn_Click(object sender, EventArgs e)
@@ -243,6 +255,8 @@ namespace MsosiCardApp
             viaziTab.Instance.Visible = false;
             tambiTab.Instance.Visible = false;
             pilauTab.Instance.Visible = false;
+            othersTab.Instance.Visible = false;
+           
             submitBtn.Visible = true;
 
             //taking the name of the menu
@@ -262,6 +276,7 @@ namespace MsosiCardApp
             pilauBtn.BackColor = Color.FromArgb(0, 122, 204);
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            otherBtn.BackColor = Color.FromArgb(0, 122, 204);
         }
 
         private void viaziBtn_Click(object sender, EventArgs e)
@@ -277,6 +292,8 @@ namespace MsosiCardApp
             ndiziTab.Instance.Visible = false;
             tambiTab.Instance.Visible = false;
             pilauTab.Instance.Visible = false;
+            othersTab.Instance.Visible = false;
+           
             submitBtn.Visible = true;
 
             //taking the name of the menu
@@ -296,6 +313,7 @@ namespace MsosiCardApp
             pilauBtn.BackColor = Color.FromArgb(0, 122, 204);
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             ndiziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            otherBtn.BackColor = Color.FromArgb(0, 122, 204);
         }
 
         private void tambiBtn_Click(object sender, EventArgs e)
@@ -311,6 +329,8 @@ namespace MsosiCardApp
             ugaliTab.Instance.Visible = false;
             viaziTab.Instance.Visible = false;
             pilauTab.Instance.Visible = false;
+            othersTab.Instance.Visible = false;
+           
             submitBtn.Visible = true;
 
             //taking the name of the menu
@@ -330,6 +350,7 @@ namespace MsosiCardApp
             pilauBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
             ndiziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            otherBtn.BackColor = Color.FromArgb(0, 122, 204);
         }
 
         private void pilauBtn_Click(object sender, EventArgs e)
@@ -346,7 +367,8 @@ namespace MsosiCardApp
             ndiziTab.Instance.Visible = false;
             tambiTab.Instance.Visible = false;
             submitBtn.Visible = true;
-
+            othersTab.Instance.Visible = false;
+           
             //taking the name of the menu
             chakula = pilauBtn.Text;
 
@@ -364,6 +386,7 @@ namespace MsosiCardApp
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
             ndiziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            otherBtn.BackColor = Color.FromArgb(0, 122, 204);
         }
 
        
@@ -895,14 +918,69 @@ namespace MsosiCardApp
                     }
                     break;
 
-                    //chips menu end
+                //chips menu end
+
+                //Others menu start
+                case "OTHERS":
+                    switch (othersTab.Instance.mboga)
+                    {
+                        //mboga part
+
+                        case "KUKU":
+                            fullOderName = "KUKU";
+                            break;
+
+                        case "NYAMA CHOMA":
+                            fullOderName = "NYAMA CHOMA";
+                            break;
+
+                        case "SAMAKI":
+                            fullOderName = "SAMAKI";
+                            break;
+
+                        case "SOUSAGE":
+                            fullOderName = "SOUSAGE";
+                            break;
+
+                        case "MAYAI":
+                            fullOderName ="YAI";
+                            break;
+
+                        case "NDIZI CHOMA":
+                            fullOderName = "NDIZI CHOMA";
+                            break;
+
+                        case "MSHKAKI KUKU":
+                            fullOderName = chakula + " MSHKAKI KUKU";
+                            break;
+
+                        case "MSHKAKI NG`OMBE":
+                            fullOderName = chakula + " MSHKAKI NG`OMBE";
+                            break;
+
+                        default:
+                            MessageBox.Show("Sorry, There is an error occured..!");
+                            break;
+
+                    }
+                    break;
+
+                    //Others menu end
 
 
             }
             try
             {
                 qnt = int.Parse(qntTxt.Text);
-                MessageBox.Show(fullOderName + " " + qnt);
+                if(qnt == 0)
+                {
+                    MessageBox.Show("0 error, Please select appropriate number(s) of order(s).");
+                }
+                else
+                {
+                    MessageBox.Show(fullOderName + " " + qnt);
+                }
+                
             }
             catch
             {
@@ -932,6 +1010,7 @@ namespace MsosiCardApp
             ugaliTab.Instance.Visible = false;
             viaziTab.Instance.Visible = false;
             pilauTab.Instance.Visible = false;
+            othersTab.Instance.Visible = false;
             fullOderName = null;
 
 
@@ -945,8 +1024,47 @@ namespace MsosiCardApp
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
             ndiziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            otherBtn.BackColor = Color.FromArgb(0, 122, 204);
+
+
+        } //END OF SUBMIT BUTTON
+
+        private void otherBtn_Click(object sender, EventArgs e)
+        {
+            holizotalTransEffect.ShowSync(othersTab.Instance);
+            menuPanel.Controls.Add(othersTab.Instance);
+            othersTab.Instance.Dock = DockStyle.Fill;
+            othersTab.Instance.Visible = true;
+            pilauTab.Instance.Visible = false;
+            viaziTab.Instance.Visible = false;
+            ugaliTab.Instance.Visible = false;
+            drinksTab.Instance.Visible = false;
+            waliTab.Instance.Visible = false;
+            chipsTab.Instance.Visible = false;
+            ndiziTab.Instance.Visible = false;
+            tambiTab.Instance.Visible = false;
+            submitBtn.Visible = true;
 
            
-        } //END OF SUBMIT BUTTON
+
+            //taking the name of the menu
+            chakula = otherBtn.Text;
+
+            //submit and done button
+            submitBtn.Visible = true;
+            doneBtn.Visible = false;
+
+            //color transition
+
+            otherBtn.Normalcolor = Color.Purple;
+            pilauBtn.BackColor = Color.FromArgb(0, 122, 204);
+            drinksBtn.BackColor = Color.FromArgb(0, 122, 204);
+            chipsBtn.BackColor = Color.FromArgb(0, 122, 204);
+            waliBtn.BackColor = Color.FromArgb(0, 122, 204);
+            ugaliBtn.BackColor = Color.FromArgb(0, 122, 204);
+            tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
+            viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
+            ndiziBtn.BackColor = Color.FromArgb(0, 122, 204);
+        }
     }
 }

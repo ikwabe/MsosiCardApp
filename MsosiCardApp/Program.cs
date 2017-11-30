@@ -16,7 +16,7 @@ namespace MsosiCardApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainPage());
+            Application.Run(new login());
         }
     }
 }
