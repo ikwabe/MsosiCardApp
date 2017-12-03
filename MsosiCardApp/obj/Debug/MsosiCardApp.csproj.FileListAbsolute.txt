@@ -22,3 +22,6 @@ C:\Users\Shadrack Ikwabe\documents\visual studio 2015\Projects\MsosiCardApp\Msos
 C:\Users\Shadrack Ikwabe\documents\visual studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.centreReg.resources
 C:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.EmpRegForm.resources
 C:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.login.resources
+C:\Users\Shadrack Ikwabe\Documents\Visual Studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.userReg.resources
+C:\Users\Shadrack Ikwabe\documents\visual studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.addFoodTab.resources
+C:\Users\Shadrack Ikwabe\documents\visual studio 2015\Projects\MsosiCardApp\MsosiCardApp\obj\Debug\MsosiCardApp.editMenu.resources

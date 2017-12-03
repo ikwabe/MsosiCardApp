@@ -31,19 +31,18 @@ namespace MsosiCardApp
             
         }
 
-        private void closeBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void loginBtn_Click(object sender, EventArgs e)
+        private void UserLogin()
         {
             DateTime date = DateTime.Today;
             MySqlConnection con = new MySqlConnection();
             con.ConnectionString = "server = localhost; user = root; password = ikwabe04; database = msosicard;";
             string signIn = "select username,password from login where username = '" + userNameTxt.Text + "' and password = '" + passwordTxt.Text + "'";
+            string category = " select * from login where username = '" + userNameTxt.Text + "' and password = '" + passwordTxt.Text + "' ";
 
             MySqlCommand com = new MySqlCommand(signIn, con);
+            MySqlCommand com1 = new MySqlCommand(category, con);
+            MySqlDataAdapter da;
+            DataTable table1 = new DataTable();
             try
             {
                 con.Open();
@@ -56,9 +55,29 @@ namespace MsosiCardApp
                 if (table.Rows.Count > 0)
                 {
                     passwordTxt.Enabled = false;
-                    centreReg cntre = new centreReg();
-                    cntre.Show();
-                    this.Hide();
+                    da = new MySqlDataAdapter(com1);
+                    da.Fill(table1);
+                    string cat = table1.Rows[0][3].ToString();
+                    da.Dispose();
+                    if (cat == "Admin")
+                    {
+                        centreReg cntre = new centreReg();
+                        cntre.Show();
+                        this.Hide();
+                    }
+                    else if (cat == "Reception")
+                    {
+                        userReg usr = new userReg();
+                        usr.Show();
+                        this.Hide();
+                    }
+                    else if (cat == "Mess")
+                    {
+                        mainPage main = new mainPage();
+                        main.Show();
+                        this.Hide();
+                    }
+
                 }
                 else
                 {
@@ -70,6 +89,27 @@ namespace MsosiCardApp
                 MessageBox.Show(ex.Message);
             }
             con.Close();
+        }
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            UserLogin();
+        }
+
+        private void passwordTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                UserLogin();
+            }
+            else
+            {
+
+            }
         }
     }
 }

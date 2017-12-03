@@ -22,7 +22,7 @@ namespace MsosiCardApp
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Btn1_Click(object sender, EventArgs e)
@@ -1065,6 +1065,12 @@ namespace MsosiCardApp
             tambiBtn.BackColor = Color.FromArgb(0, 122, 204);
             viaziBtn.BackColor = Color.FromArgb(0, 122, 204);
             ndiziBtn.BackColor = Color.FromArgb(0, 122, 204);
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            editMenu edM = new editMenu();
+            edM.Show();
         }
     }
 }

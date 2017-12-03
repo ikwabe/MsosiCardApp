@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addFoodTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addFoodTab.Designer.cs">
+      <DependentUpon>addFoodTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="centreReg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,12 @@
     </Compile>
     <Compile Include="drinksTab.Designer.cs">
       <DependentUpon>drinksTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editMenu.Designer.cs">
+      <DependentUpon>editMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpRegForm.cs">
       <SubType>Form</SubType>
@@ -119,6 +131,12 @@
     <Compile Include="ugaliTab.Designer.cs">
       <DependentUpon>ugaliTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="userReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userReg.Designer.cs">
+      <DependentUpon>userReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="viaziTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +149,9 @@
     <Compile Include="waliTab.Designer.cs">
       <DependentUpon>waliTab.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addFoodTab.resx">
+      <DependentUpon>addFoodTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="centreReg.resx">
       <DependentUpon>centreReg.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="drinksTab.resx">
       <DependentUpon>drinksTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editMenu.resx">
+      <DependentUpon>editMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpRegForm.resx">
       <DependentUpon>EmpRegForm.cs</DependentUpon>
@@ -172,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ugaliTab.resx">
       <DependentUpon>ugaliTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userReg.resx">
+      <DependentUpon>userReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viaziTab.resx">
       <DependentUpon>viaziTab.cs</DependentUpon>

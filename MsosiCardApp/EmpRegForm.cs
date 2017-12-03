@@ -59,6 +59,7 @@ namespace MsosiCardApp
                 MessageBox.Show(ex.Message);
 
             }
+            con.Close();
         }
 
         private void regEmpBtn_Click(object sender, EventArgs e)
@@ -67,7 +68,7 @@ namespace MsosiCardApp
             MySqlConnection con = new MySqlConnection();
             con.ConnectionString = "server = localhost; user = root; password = ikwabe04; database = msosicard;";
 
-            string regEmp = "insert into employee(emp_name,address,phone,role,centre_id,date) values ('" + empNameTxt.Text.ToUpper() + "', '" + addressTxt.Text + "', '" + phoneTxt.Text + "','" + roleCombo.Text + "','" + centre_id + "','" + date + "')";
+            string regEmp = "insert into employee(emp_name,address,phone,role,centre_id,date) values ('" + empNameTxt.Text.ToUpper() + "', '" + addressTxt.Text + "', '" + phoneTxt.Text + "','" + roleCombo.Text + "','" + centre_id + "','" + date.ToShortDateString() + "')";
             string userlogin = "insert into login(username,password,category) values('" + userNameTxt.Text + "', 'msosi1234','"+ roleCombo.Text +"')";
             MySqlCommand com = new MySqlCommand(regEmp, con);
             MySqlCommand com1 = new MySqlCommand(userlogin, con);
@@ -105,6 +106,18 @@ namespace MsosiCardApp
             }
 
             con.Close();
+        }
+
+        private void empNameTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -161,6 +161,7 @@
             this.empNameTxt.Size = new System.Drawing.Size(318, 45);
             this.empNameTxt.TabIndex = 11;
             this.empNameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.empNameTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.empNameTxt_KeyPress);
             // 
             // panel3
             // 
